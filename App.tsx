@@ -78,10 +78,8 @@ export default function App() {
           'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "gpt-3.5-turbo",
+          model: "gpt-5-nano",
           messages: messages,
-          max_tokens: 150,
-          temperature: 0.7,
         }),
       });
 
@@ -99,6 +97,7 @@ export default function App() {
       }
 
       const data = await response.json();
+      console.log("Data", data)
       return data.choices[0]?.message?.content || "I'm here to listen. Could you share more about what's on your mind?";
     } catch (error) {
       console.error('OpenAI API Error:', error);
