@@ -26,7 +26,7 @@ export default function App() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm here to listen and support you. How are you feeling today?",
+      text: "សួស្ដី! ខ្ញុំនៅទីនេះដើម្បីស្តាប់ និងគាំទ្រអ្នក។ ថ្ងៃនេះ តើអ្នកមានអារម្មណ៍យ៉ាងដូចម្តេចដែរ?",
       isUser: false,
       timestamp: new Date(),
     }
@@ -78,7 +78,7 @@ export default function App() {
           'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({
-          model: "gpt-5-nano",
+          model: "gpt-5",
           messages: messages,
         }),
       });
@@ -163,8 +163,8 @@ export default function App() {
       
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>AI Therapist</Text>
-        <Text style={styles.headerSubtitle}>Safe space for your thoughts</Text>
+        <Text style={styles.headerTitle}>​អ្នកប្រឹក្សាផ្នែកផ្លូវចិត្តបញ្ញាសិប្បនិម្មិត</Text>
+        <Text style={styles.headerSubtitle}>កន្លែងសុវត្ថិភាពសម្រាប់ការចែករំលែកអំពីចិត្តរបស់អ្នក</Text>
 
       </View>
 
